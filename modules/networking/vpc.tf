@@ -1,0 +1,10 @@
+# VPC
+
+resource "aws_vpc" "vpc" {
+  cidr_block = var.vpc_cidr
+
+  tags = {
+    Name = "${var.environment}-vpc"
+    environment = var.environment
+  }
+}
